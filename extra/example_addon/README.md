@@ -1,4 +1,4 @@
-MOD_PREFIX_addonName
+duic_addonName
 ===================
 
 Description for this addon

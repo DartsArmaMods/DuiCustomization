@@ -1,6 +1,6 @@
-name = "MOD_TITLE"
+name = "DUI Customization"
 author = "DartRuffian"
-prefix = "MOD_PREFIX"
+prefix = "duic"
 mainprefix = "z"
 
 [version]
@@ -11,10 +11,10 @@ git_hash = 0
 include = [
     "mod.cpp",
     "meta.cpp",
-    "logo_MOD_PREFIX.png",
-    "logo_MOD_PREFIX_over.png",
-    "logo_MOD_PREFIX_ca.paa",
-    "logo_MOD_PREFIX_over_ca.paa",
+    "logo_duic.png",
+    "logo_duic_over.png",
+    "logo_duic_ca.paa",
+    "logo_duic_over_ca.paa",
     "LICENSE.md",
     "README.md",
 ]

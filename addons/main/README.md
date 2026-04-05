@@ -1,4 +1,4 @@
-MOD_PREFIX_main
+duic_main
 ===================
 
-Main Addon for MOD_TITLE
+Main Addon for DUI Customization
