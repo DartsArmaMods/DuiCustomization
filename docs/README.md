@@ -8,8 +8,8 @@
     <a href="https://github.com/DartsArmaMods/DuiCustomization/issues">
         <img src="https://img.shields.io/github/issues-raw/DartsArmaMods/DuiCustomization.svg?style=flat-square&label=Issues" alt="DUI Customization Issues">
     </a>
-    <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=MOD_ID">
-        <img src="https://img.shields.io/steam/downloads/MOD_ID.svg?style=flat-square&label=Downloads" alt="DUI Customization Downloads">
+    <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3700588519">
+        <img src="https://img.shields.io/steam/downloads/3700588519.svg?style=flat-square&label=Downloads" alt="DUI Customization Downloads">
     </a>
     <a href="https://github.com/DartsArmaMods/DuiCustomization/blob/master/LICENSE">
         <img src="https://img.shields.io/badge/License-APL ND-red?style=flat-square" alt="DUI Customization License">
@@ -19,31 +19,16 @@
 </p>
 
 <p align="center">
-    <b>Requires the latest version of <a href="https://github.com/CBATeam/CBA_A3/releases/latest">CBA A3</a></b>
+    <b>Requires the latest version of <a href="https://github.com/CBATeam/CBA_A3/releases/latest">CBA A3</a> and <a href="https://github.com/acemod/ACE3/releases/latest">ACE3</a></b>
 </p>
 
-# Initial Project Setup!
-Delete this section after the project has been initially set up:
-1. Find and replace all instances of `DUI Customization` with the mod's name.
-2. Find and replace all instances of `DuiCustomization` with the mod's name *and no spaces*.
-   - This should be the name of the repository on GitHub.
-3. Find and replace all instances of `duic` with the mod's prefix.
-   - This should be all lowercase.
-4. Find and replace all instances of `DUIC` with the mod's acronym.
-   - This should be all uppercase.
-5. After the initial Steam upload, find and replace all instances of `MOD_ID` with the mod's Steam Workshop id.
-
-For third parties, make sure to also replace `DartsArmaMods` with your Github username / organization name, and to replace `DartRuffian` with your username.
-
-**DUI Customization** (DUIC) aims to...
+**DUI Customization** lets people customize their fireteam color and their custom info, which is displayed under the group name when looking at a unit.
 
 The project is entirely **open-source** and any contributions are welcome.
 
 ## Core Features
-- Feature
+- ACE interact to set a custom color
+- CBA setting to set custom info
 
 ## Contributing
 For new contributers, see the [Contributing Setup & Guidelines](./.github/CONTRIBUTING.md).
-
-## License
-DUI Customization is licensed under [APL-ND](./LICENSE.md).
