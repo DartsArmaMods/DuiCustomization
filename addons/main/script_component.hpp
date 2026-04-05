@@ -6,7 +6,7 @@
 // #define DISABLE_COMPILE_CACHE
 // #define ENABLE_PERFORMANCE_COUNTERS
 
-#include "\A3\UI_F\hpp\defineCommonGrids.inc"
-#include "\A3\UI_F\hpp\defineResincl.inc"
-#include "\A3\UI_F\hpp\defineCommonColors.inc"
+#include "\a3\ui_f\hpp\defineCommonGrids.inc"
+#include "\a3\ui_f\hpp\defineResincl.inc"
+#include "\a3\ui_f\hpp\defineCommonColors.inc"
 #include "script_macros.hpp"
