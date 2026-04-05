@@ -2,20 +2,20 @@
 
 <h1 align="center">DUI Customization</h1>
 <p align="center">
-    <a href="https://github.com/DartsArmaMods/DUI-Customization/releases/latest">
+    <a href="https://github.com/DartsArmaMods/DuiCustomization/releases/latest">
         <img src="https://img.shields.io/badge/Version-0.0.0-blue?style=flat-square" alt="DUI Customization Version">
     </a>
-    <a href="https://github.com/DartsArmaMods/DUI-Customization/issues">
-        <img src="https://img.shields.io/github/issues-raw/DartsArmaMods/DUI-Customization.svg?style=flat-square&label=Issues" alt="DUI Customization Issues">
+    <a href="https://github.com/DartsArmaMods/DuiCustomization/issues">
+        <img src="https://img.shields.io/github/issues-raw/DartsArmaMods/DuiCustomization.svg?style=flat-square&label=Issues" alt="DUI Customization Issues">
     </a>
     <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=MOD_ID">
         <img src="https://img.shields.io/steam/downloads/MOD_ID.svg?style=flat-square&label=Downloads" alt="DUI Customization Downloads">
     </a>
-    <a href="https://github.com/DartsArmaMods/DUI-Customization/blob/master/LICENSE">
+    <a href="https://github.com/DartsArmaMods/DuiCustomization/blob/master/LICENSE">
         <img src="https://img.shields.io/badge/License-APL ND-red?style=flat-square" alt="DUI Customization License">
     </a>
     <br>
-    <img src="https://img.shields.io/github/actions/workflow/status/DartsArmaMods/DUI-Customization/check.yml?style=flat-square&label=HEMTT" alt="HEMTT">
+    <img src="https://img.shields.io/github/actions/workflow/status/DartsArmaMods/DuiCustomization/check.yml?style=flat-square&label=HEMTT" alt="HEMTT">
 </p>
 
 <p align="center">
@@ -25,7 +25,7 @@
 # Initial Project Setup!
 Delete this section after the project has been initially set up:
 1. Find and replace all instances of `DUI Customization` with the mod's name.
-2. Find and replace all instances of `DUI-Customization` with the mod's name *and no spaces*.
+2. Find and replace all instances of `DuiCustomization` with the mod's name *and no spaces*.
    - This should be the name of the repository on GitHub.
 3. Find and replace all instances of `duic` with the mod's prefix.
    - This should be all lowercase.

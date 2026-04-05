@@ -4,10 +4,9 @@ PREP_RECOMPILE_START;
 #include "XEH_PREP.hpp"
 PREP_RECOMPILE_END;
 
-// private _category = [QUOTE(MOD_NAME), LLSTRING(displayName)];
+private _category = [QUOTE(MOD_NAME), LLSTRING(displayName)];
 
-// #include "initSettings.inc.sqf"
-// #include "initKeybinds.inc.sqf"
+#include "initSettings.inc.sqf"
 
 // No vanilla event for changing teams, so just use ACE
 ["ace_interaction_joinedTeam", {

@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="DUIC">
     <Package name="Main">
+        <Key ID="STR_duic_main_customInfo_name">
+            <English>Custom Info</English>
+        </Key>
+        <Key ID="STR_duic_main_customInfo_tooltip">
+            <English>Custom info that's displayed under your name tag. Can include pronouns, role, etc.</English>
+        </Key>
         <Key ID="STR_duic_main_displayName">
             <English>Main</English>
         </Key>
@@ -14,20 +20,20 @@
             <English>Set Custom Color</English>
         </Key>
         <Key ID="STR_duic_main_url">
-            <English>https://github.com/DartsArmaMods/DUI-Customization</English>
-            <Czech>https://github.com/DartsArmaMods/DUI-Customization</Czech>
-            <French>https://github.com/DartsArmaMods/DUI-Customization</French>
-            <Spanish>https://github.com/DartsArmaMods/DUI-Customization</Spanish>
-            <Italian>https://github.com/DartsArmaMods/DUI-Customization</Italian>
-            <Polish>https://github.com/DartsArmaMods/DUI-Customization</Polish>
-            <Portuguese>https://github.com/DartsArmaMods/DUI-Customization</Portuguese>
-            <Russian>https://github.com/DartsArmaMods/DUI-Customization</Russian>
-            <German>https://github.com/DartsArmaMods/DUI-Customization</German>
-            <Korean>https://github.com/DartsArmaMods/DUI-Customization</Korean>
-            <Japanese>https://github.com/DartsArmaMods/DUI-Customization</Japanese>
-            <Chinese>https://github.com/DartsArmaMods/DUI-Customization</Chinese>
-            <Chinesesimp>https://github.com/DartsArmaMods/DUI-Customization</Chinesesimp>
-            <Turkish>https://github.com/DartsArmaMods/DUI-Customization</Turkish>
+            <English>https://github.com/DartsArmaMods/DuiCustomization</English>
+            <Czech>https://github.com/DartsArmaMods/DuiCustomization</Czech>
+            <French>https://github.com/DartsArmaMods/DuiCustomization</French>
+            <Spanish>https://github.com/DartsArmaMods/DuiCustomization</Spanish>
+            <Italian>https://github.com/DartsArmaMods/DuiCustomization</Italian>
+            <Polish>https://github.com/DartsArmaMods/DuiCustomization</Polish>
+            <Portuguese>https://github.com/DartsArmaMods/DuiCustomization</Portuguese>
+            <Russian>https://github.com/DartsArmaMods/DuiCustomization</Russian>
+            <German>https://github.com/DartsArmaMods/DuiCustomization</German>
+            <Korean>https://github.com/DartsArmaMods/DuiCustomization</Korean>
+            <Japanese>https://github.com/DartsArmaMods/DuiCustomization</Japanese>
+            <Chinese>https://github.com/DartsArmaMods/DuiCustomization</Chinese>
+            <Chinesesimp>https://github.com/DartsArmaMods/DuiCustomization</Chinesesimp>
+            <Turkish>https://github.com/DartsArmaMods/DuiCustomization</Turkish>
         </Key>
     </Package>
 </Project>
