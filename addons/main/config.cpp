@@ -8,7 +8,7 @@ class CfgPatches {
         name = COMPONENT_NAME;
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
-            "cba_main"
+            "ace_interaction"
         };
         units[] = {};
         weapons[] = {};
@@ -16,4 +16,7 @@ class CfgPatches {
     };
 };
 
+#include "gui.hpp"
+#include "CfgVehicles.hpp"
+#include "CfgEventHandlers.hpp"
 #include "CfgSettings.hpp"

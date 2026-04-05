@@ -1,6 +1,8 @@
 [default]
 workshop = [
     "450814997",  # CBA_A3
+    "463939057",  # ACE
+    "1638341685", # DUI - Squad Radar
     "3499977893", # Advanced Dev Tools
     "623475643",  # 3DEN Enhanced
 ]
@@ -8,9 +10,3 @@ presets = []
 dlc = []
 optionals = []
 parameters = []
-
-[ace]
-extends = "default"
-workshop = [
-    "463939057", # ACE
-]

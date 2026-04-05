@@ -4,6 +4,15 @@
         <Key ID="STR_duic_main_displayName">
             <English>Main</English>
         </Key>
+        <Key ID="STR_duic_main_joinCustomColor">
+            <English>Join Custom Color</English>
+        </Key>
+        <Key ID="STR_duic_main_noColorSet">
+            <English>No custom color set</English>
+        </Key>
+        <Key ID="STR_duic_main_setCustomColor">
+            <English>Set Custom Color</English>
+        </Key>
         <Key ID="STR_duic_main_url">
             <English>https://github.com/DartsArmaMods/DUI-Customization</English>
             <Czech>https://github.com/DartsArmaMods/DUI-Customization</Czech>
