@@ -13,7 +13,7 @@ class CfgVehicles {
                     class GVAR(setCustomColor) {
                         displayName = CSTRING(setCustomColor);
                         condition = "true";
-                        statement = QUOTE(createDialog QQGVAR(RscSetColor));
+                        statement = QUOTE(ARR_2(findDisplay 46,'Select Color') call FUNC(createColorPicker));
                     };
                 };
             };
