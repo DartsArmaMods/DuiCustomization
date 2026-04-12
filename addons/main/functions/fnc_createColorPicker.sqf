@@ -40,9 +40,9 @@ private _display = _parentDisplay createDisplay "RscDisplayEmpty";
 // Hide the vignette (RscDisplayEmpty not actually being empty...)
 (_display displayCtrl 1202) ctrlShow false;
 
-private _title = _display ctrlCreate ["ctrlStaticTitle", -1];
+private _ctrlTitle = _display ctrlCreate ["ctrlStaticTitle", -1];
 
-_title ctrlSetPosition
+_ctrlTitle ctrlSetPosition
 [
     0.5 - (0.5 * WIDTH) * GRID_W,
     0.5 - 40 * GRID_H,
@@ -50,7 +50,7 @@ _title ctrlSetPosition
     5 * GRID_H
 ];
 
-_title ctrlSetText "TEST";
+_ctrlTitle ctrlSetText _title;
 
 private _ctrlControlsGroup =  _display ctrlCreate ["ctrlControlsGroupNoScrollbars", -1];
 
@@ -62,9 +62,9 @@ _ctrlControlsGroup ctrlSetPosition
     49 * GRID_H
 ];
 
-private _background = _display ctrlCreate ["ctrlStaticBackground", -1, _ctrlControlsGroup];
+private _ctrlBackground = _display ctrlCreate ["ctrlStaticBackground", -1, _ctrlControlsGroup];
 
-_background ctrlSetPosition
+_ctrlBackground ctrlSetPosition
 [
     0,
     0,
@@ -185,6 +185,7 @@ _ctrlButtonOK ctrlSetPosition
     5 * GRID_H
 ];
 
+// Default code
 if (_onOKClicked isEqualTo {}) then
 {
     _onOKClicked =
@@ -198,7 +199,7 @@ if (_onOKClicked isEqualTo {}) then
         private _ctrlEditRGBA255 = _display getVariable ["EditRGBA255", controlNull];
         private _ctrlEditRGBA = _display getVariable ["EditRGBA", controlNull];
 
-        uiNamespace setVariable ["CBA_ColorPicker_Result",
+        uiNamespace setVariable ["R3vo_ColorPicker_Result",
             [
                 "HEXAlpha",
                 "HEX",
