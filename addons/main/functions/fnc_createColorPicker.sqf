@@ -1,19 +1,21 @@
+#include "..\script_component.hpp"
 /*
-    Author: R3vo
-
-    Date: 2026-04-12
-
-    Description:
-    A Color Picker, it picks colors.
-
-    Parameter(s):
-    0: DISPLAY - Parent display, optional, default (findDisplay IDD_DISPLAY3DEN)
-    1: STRING - Window title, option, default "Color Picker"
-    2: CODE - Code executed when OK button is clicked, option, default see line 190
-
-    Return Value:
-    NOTHING
-*/
+ * Authors: R3vo
+ * A Color Picker, it picks colors.
+ *
+ * Arguments:
+ * 0: DISPLAY - Parent display, optional, default (findDisplay IDD_DISPLAY3DEN)
+ * 1: STRING - Window title, option, default "Color Picker"
+ * 2: CODE - Code executed when OK button is clicked, option, default see line 190
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [params] call duic_main_fnc_createColorPicker
+ *
+ * Public: No
+ */
 
 #include "\a3\3den\ui\macros.inc"
 #include "\a3\3den\ui\resincl.inc"
