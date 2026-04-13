@@ -1,4 +1,6 @@
 #include "..\script_component.hpp"
+#include "\a3\3den\ui\macros.inc"
+#include "\a3\3den\ui\resincl.inc"
 /*
  * Authors: R3vo
  * A Color Picker, it picks colors.
@@ -18,23 +20,36 @@
  * Public: No
  */
 
-#include "\a3\3den\ui\macros.inc"
-#include "\a3\3den\ui\resincl.inc"
-
 #define COLOR_RED [0.8, 0, 0, 1]
 #define COLOR_GREEN [0, 0.8, 0, 1]
 #define COLOR_BLUE [0, 0, 0.8, 1]
 #define IDC_BTN_CANCEL 2
 #define IDC_BTN_OK 1
 #define WIDTH 90
-#define DEFAULT_SLIDER_POS 0.5
+#define HEX_A_PATTERN "\#{1}[A-F0-9]{8}"
+#define HEX_PATTERN "\#{1}[A-F0-9]{6}"
+#define RGBA255_PATTERN "[0-9]{1,3},[0-9]{1,3},[0-9]{1,3},[0-9]{1,3}"
+#define RGBA_PATTERN "[01]\.[0-9]{0,2},[01]\.[0-9]{0,2},[01]\.[0-9]{0,2},[01]\.[0-9]{0,2}"
 
 params
 [
-    ["_parentDisplay", findDisplay IDD_DISPLAY3DEN],
-    ["_title", "Color Picker"],
-    ["_onOKClicked", {}]
+    ["_parentDisplay", findDisplay IDD_DISPLAY3DEN, [displayNull]],
+    ["_title", "Color Picker", [""]],
+    ["_onOKClicked", {}, [{}]],
+    ["_initialColor", [1, 1, 1, 1], [[], ""], [3, 4]]
 ];
+
+if (_initialColor isEqualType "") then
+{
+    if (_initialColor regexMatch HEX_A_PATTERN) exitWith
+    {
+        _initialColor = [_initialColor] call CBA_fnc_colorAHEXtoDecimal;
+    };
+    if (_initialColor regexMatch HEX_PATTERN) exitWith
+    {
+        _initialColor = [_initialColor] call CBA_fnc_colorHEXtoDecimal;
+    };
+};
 
 private _display = _parentDisplay createDisplay "RscDisplayEmpty";
 
@@ -51,7 +66,7 @@ _ctrlTitle ctrlSetPosition
     5 * GRID_H
 ];
 
-_ctrlTitle ctrlSetText _title;
+_ctrlTitle ctrlSetText (_title call BIS_fnc_localize);
 
 private _ctrlControlsGroup =  _display ctrlCreate ["ctrlControlsGroupNoScrollbars", -1];
 
@@ -84,8 +99,6 @@ for "_i" from 0 to 3 do
         5 * GRID_H
     ];
 
-    _ctrlSlider sliderSetPosition DEFAULT_SLIDER_POS;
-
     private _color = [COLOR_RED, COLOR_GREEN, COLOR_BLUE, [1, 1, 1, 1]] select _i;
     _ctrlSlider ctrlSetForegroundColor _color;
     _ctrlSlider ctrlSetActiveColor _color;
@@ -109,6 +122,9 @@ for "_i" from 0 to 3 do
             _display setVariable ["SliderAlpha", _ctrlSlider];
         };
     };
+
+    // Set default color. Use param to prevent mismatch between RGB and RGBA
+    _ctrlSlider sliderSetPosition (_initialColor param [_i, 1]);
 };
 
 private _ctrlPreview = _display ctrlCreate ["ctrlStaticPicture", -1, _ctrlControlsGroup];
@@ -200,7 +216,9 @@ if (_onOKClicked isEqualTo {}) then
         private _ctrlEditRGBA255 = _display getVariable ["EditRGBA255", controlNull];
         private _ctrlEditRGBA = _display getVariable ["EditRGBA", controlNull];
 
-        uiNamespace setVariable ["DUIC_ColorPicker_Result",
+        uiNamespace setVariable
+        [
+            QGVAR(ColorPicker_Result),
             [
                 "HEXAlpha",
                 "HEX",
@@ -317,21 +335,21 @@ private _onEditChanged =
     private _colorFormat = [1, 1, 1, 1];
 
     // Hex with alpha changed
-    if (toUpper _text regexMatch "\#{1}[A-F0-9]{8}") then
+    if (toUpper _text regexMatch HEX_A_PATTERN) then
     {
         _colorFormat = _text call CBA_fnc_colorAHEXtoDecimal;
         _validInput = true;
     };
 
     // Hex without alpha changed
-    if (toUpper _text regexMatch "\#{1}[A-F0-9]{6}") then
+    if (toUpper _text regexMatch HEX_PATTERN) then
     {
         _colorFormat = _text call CBA_fnc_colorHEXtoDecimal;
         _validInput = true;
     };
 
     // RGBA255 changed
-    if (_text regexMatch "[0-9]{1,3},[0-9]{1,3},[0-9]{1,3},[0-9]{1,3}") then
+    if (_text regexMatch RGBA255_PATTERN) then
     {
         _colorFormat = _text splitString ", " apply
         {
@@ -341,7 +359,7 @@ private _onEditChanged =
     };
 
     // RGBA changed
-    if (_text regexMatch "[01]\.[0-9]{0,2},[01]\.[0-9]{0,2},[01]\.[0-9]{0,2},[01]\.[0-9]{0,2}") then
+    if (_text regexMatch RGBA_PATTERN) then
     {
         _colorFormat = _text splitString ", " apply
         {
