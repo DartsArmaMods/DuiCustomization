@@ -10,7 +10,14 @@
  * 1: Window title (optional, default: "Color Picker")
  * 2: Code executed when OK button is clicked
  *    (optional, default, color results are saved to uiNamespace variable "DUIC_ColorPicker_Result" as HashMap
- *
+ * 3: Default color when UI is opened in format [r, g, b, a] or HEX (optional, default: [1, 1, 1, 1])
+ * 4: Disable alpha slider (optional, default: false)
+ * 5: Disable HEXA edit box (optional, default: false)
+ * 6: Disable HEX edit box (optional, default: false)
+ * 7: Disable RGBA255 edit box (optional, default: false)
+ * 8: Disable RGBA edit box (optional, default: false)
+
+
  * Return Value:
  * None
  *
@@ -36,7 +43,12 @@ params
     ["_parentDisplay", findDisplay IDD_DISPLAY3DEN, [displayNull]],
     ["_title", "Color Picker", [""]],
     ["_onOKClicked", {}, [{}]],
-    ["_initialColor", [1, 1, 1, 1], [[], ""], [3, 4]]
+    ["_initialColor", [1, 1, 1, 1], [[], ""], [3, 4]],
+    ["_disableAlphaSlider", false, [true]],
+    ["_disableHEXA", false, [true]],
+    ["_disableHEX", false, [true]],
+    ["_disableRGBA255", false, [true]],
+    ["_disableRGBA", false, [true]]
 ];
 
 if (_initialColor isEqualType "") then
@@ -248,6 +260,20 @@ _ctrlButtonCancel ctrlSetPosition
     25 * GRID_W,
     5 * GRID_H
 ];
+
+if (_disableAlphaSlider) then
+{
+    private _ctrlSliderAlpha = _display getVariable ["SliderAlpha", controlNull];
+
+    _ctrlSliderAlpha ctrlEnable false;
+    _ctrlSliderAlpha ctrlSetForegroundColor [0.3, 0.3, 0.3, 0.3];
+    _ctrlSliderAlpha ctrlSetActiveColor [0.3, 0.3, 0.3, 0.3];
+};
+
+_ctrlEditHEXAlpha ctrlEnable !_disableHEXA;
+_ctrlEditHEX ctrlEnable !_disableHEX;
+_ctrlEditRGBA255 ctrlEnable !_disableRGBA255;
+_ctrlEditRGBA ctrlEnable !_disableRGBA;
 
 allControls _display apply {_x ctrlCommit 0};
 

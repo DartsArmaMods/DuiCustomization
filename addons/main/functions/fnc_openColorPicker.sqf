@@ -19,5 +19,10 @@
     call BIS_fnc_displayMission,
     CSTRING(setCustomColor),
     FUNC(saveColor),
-    (profileNamespace getVariable [QGVAR(customColor), "#FFFFFF"])
+    (profileNamespace getVariable [QGVAR(customColor), "#FFFFFF"]),
+    true,
+    true,
+    false,
+    true,
+    true
 ] call FUNC(createColorPicker);
