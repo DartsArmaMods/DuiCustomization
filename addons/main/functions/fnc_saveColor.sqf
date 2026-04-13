@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * [params] call DUI_main_fnc_saveColor
+ * _button call duic_main_fnc_saveColor
  *
  * Public: No
  */
@@ -23,5 +23,3 @@ private _ctrlEditHEX = _display getVariable ["EditHex", controlNull];
 profileNamespace setVariable [QGVAR(customColor), ctrlText _ctrlEditHEX];
 
 _display closeDisplay 1;
-
-nil
