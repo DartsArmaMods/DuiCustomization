@@ -4,9 +4,10 @@
  * A Color Picker, it picks colors.
  *
  * Arguments:
- * 0: DISPLAY - Parent display, optional, default (findDisplay IDD_DISPLAY3DEN)
- * 1: STRING - Window title, option, default "Color Picker"
- * 2: CODE - Code executed when OK button is clicked, option, default see line 190
+ * 0: Parent display (optional, default display Display3DEN)
+ * 1: Window title (optional, default: "Color Picker")
+ * 2: Code executed when OK button is clicked
+ *    (optional, default, color results are saved to uiNamespace variable "DUIC_ColorPicker_Result" as HashMap
  *
  * Return Value:
  * None
@@ -199,7 +200,7 @@ if (_onOKClicked isEqualTo {}) then
         private _ctrlEditRGBA255 = _display getVariable ["EditRGBA255", controlNull];
         private _ctrlEditRGBA = _display getVariable ["EditRGBA", controlNull];
 
-        uiNamespace setVariable ["R3vo_ColorPicker_Result",
+        uiNamespace setVariable ["DUIC_ColorPicker_Result",
             [
                 "HEXAlpha",
                 "HEX",
