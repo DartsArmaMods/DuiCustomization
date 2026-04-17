@@ -3,7 +3,7 @@
 <h1 align="center">DUI Customization</h1>
 <p align="center">
     <a href="https://github.com/DartsArmaMods/DuiCustomization/releases/latest">
-        <img src="https://img.shields.io/badge/Version-1.0.0-blue?style=flat-square" alt="DUI Customization Version">
+        <img src="https://img.shields.io/badge/Version-1.1.0-blue?style=flat-square" alt="DUI Customization Version">
     </a>
     <a href="https://github.com/DartsArmaMods/DuiCustomization/issues">
         <img src="https://img.shields.io/github/issues-raw/DartsArmaMods/DuiCustomization.svg?style=flat-square&label=Issues" alt="DUI Customization Issues">

@@ -8,7 +8,7 @@ class CfgVehicles {
                     displayName = CSTRING(joinCustomColor);
                     condition = "true";
                     statement = QUOTE([] call FUNC(joinCustomColor));
-                    modifierFunction = QFUNC(modifyJoinCustomColor);
+                    modifierFunction = QUOTE(call FUNC(modifyJoinCustomColor));
 
                     class GVAR(setCustomColor) {
                         displayName = CSTRING(setCustomColor);
