@@ -10,3 +10,4 @@ presets = []
 dlc = []
 optionals = []
 parameters = []
+mission = "DUI_CUSTOMIZATION.VR"
